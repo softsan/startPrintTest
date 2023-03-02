@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="StarIO_ClassLibrary" />
+    <None Remove="StarIO_Extension_ClassLibrary" />
+    <None Remove="StarIoWrapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="StarIO_ClassLibrary">
+      <HintPath>..\libs\NetStandard\StarIO_ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="StarIO_Extension_ClassLibrary">
+      <HintPath>..\libs\NetStandard\StarIO_Extension_ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="StarIoWrapper">
+      <HintPath>..\libs\NetStandard\StarIoWrapper.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
